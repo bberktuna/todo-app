@@ -19,7 +19,7 @@ const height = Dimensions.get("window").height
 const Header = ({ headerText, fontFamily }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{ fontFamily: fontFamily, color: "white", fontSize: 28 }}>
+      <Text style={{ fontFamily: fontFamily, color: "#cdb891", fontSize: 28 }}>
         {headerText}
       </Text>
       <TouchableOpacity style={styles.iconOpacity}>
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
-    tintColor: "white",
+    tintColor: "#cdb891",
   },
   iconOpacity: {
     marginRight: 10,

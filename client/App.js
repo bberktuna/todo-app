@@ -53,7 +53,7 @@ export default function App() {
       <View style={styles.renderWidth}>
         <Text
           style={{
-            color: "white",
+            color: "#cdb891",
             fontFamily: "Inconsolata_700Bold",
             fontSize: 18,
           }}
@@ -63,7 +63,7 @@ export default function App() {
         <TouchableOpacity style={styles.opacityTopIcon} onPress={onPressTrash}>
           <Image
             source={require("./src/assets/trash.png")}
-            style={styles.icon}
+            style={[styles.icon, { tintColor: "red" }]}
           />
         </TouchableOpacity>
       </View>
@@ -128,9 +128,9 @@ export default function App() {
           <TextInput
             autoCorrect={false}
             blurOnSubmit={true}
-            placeholder="new task..."
+            placeholder="new todo..."
             placeholderTextColor="#ACACAC"
-            style={styles.input}
+            style={[styles.input, { fontFamily: "Inconsolata_700Bold" }]}
             value={text}
             onChangeText={(text) => setText(text)}
             onSubmitEditing={onSubmitEditing}
@@ -155,13 +155,13 @@ const styles = StyleSheet.create({
   input: {
     width: width * 0.9,
     height: height * 0.05,
-    color: "white",
+    color: "#cdb891",
     paddingLeft: 15,
   },
   renderWidth: {
     flex: 1,
-    borderWidth: 0.5,
-    borderColor: "#ACACAC",
+    borderWidth: 1,
+    borderColor: "white",
     padding: 15,
     marginHorizontal: 10,
     borderRadius: 6,
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   icon: {
     width: 20,
     height: 20,
-    tintColor: "white",
+    tintColor: "#cdb891",
   },
   opacityTopIcon: {
     position: "absolute",
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     borderTopWidth: 0.75,
-    borderColor: "white",
+    borderColor: "#cdb891",
     alignItems: "center",
     paddingRight: 5,
   },
